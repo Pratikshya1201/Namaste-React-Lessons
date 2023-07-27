@@ -10,12 +10,29 @@
 <body>
     <div id="root"></div>
 
+    <!--Hello World using Javascript-->
     <script>
         const heading = document.createElement("h1");
         heading.innerHTML = "Hello World from Javascript!";
 
         const root = document.getElementById("root");
         root.appendChild(heading);
+    </script>
+
+    <!--Hello World using React-->
+    <script
+    crossorigin
+    src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+    crossorigin
+    src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+
+    <script>
+        const heading1 = React.createElement("h1", {}, "Hello World from React");
+        const root1 = ReactDOM.createRoot(document.getElementById("root"));
+        root1.render(heading1);
     </script>
 </body>
 </html>
